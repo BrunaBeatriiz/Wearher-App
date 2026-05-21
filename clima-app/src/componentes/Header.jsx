@@ -1,11 +1,17 @@
-const Header = () => {
-  return(
-    <div>
-      <h1>Weather Today</h1>
-      <button>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
-      </button>
-    </div>
+import { Moon, Sun } from "lucide-react";
+
+
+
+const Header = ({dark, darkMode}) => {
+  return (
+    <header className={`
+    w-full flex items-center justify-between px-2 py-3 mb-8 ${dark ? "bg-blue-900" : "bg-sky-900"}`}>
+      <h1 className="text-xl font-semibold text-white">Weather Today</h1>
+    <button className="text-sm p-2 rounded-full border border-white/70 shadow-sm transition-all duration-300 hover:scale-110 active:scale-90"
+    onClick={() => darkMode()}>
+     {dark ? <Sun size={18} className="text-white"/> : <Moon size={18} className="text-white"/>}
+</button>
+    </header>
   )
 }
 
