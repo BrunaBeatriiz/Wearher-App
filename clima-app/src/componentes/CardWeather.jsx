@@ -67,7 +67,7 @@ const CardWeather = ({ weather, dark, previsao }) => {
 
       </div>
 
-      <div className={`w-[90%] mt-4  rounded-xl px-4 py-2 backdrop-blur-md text-center ${dark ? "bg-slate-800/40" : "bg-white/30"}
+      <div className={`w-[80%] mt-4  rounded-xl px-4 py-2 backdrop-blur-md text-center ${dark ? "bg-slate-800/40" : "bg-white/30"}
         `}>
         <p className="text-sm font-semibold">🌬️ {weather?.wind?.speed} m/s</p>
       </div>
